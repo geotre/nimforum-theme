@@ -1,0 +1,600 @@
+:root {
+  --color-green: #7CE38B;
+  --color-orange: #FFB564;
+  --color-blue: #90B8FC;
+  --color-yellow: #F9EA87;
+  --color-purple: #AB93ED;
+  --color-red: #DC7783;
+
+  --color-black-darkest: #22252A;
+  --color-black-dark: #26292E;
+  --color-black-medium: #2F3237;
+  --color-black-light: #383C40;
+  --color-grey-dark: #4B5053;
+  --color-grey-medium: #676D6F;
+  --color-grey-light: #8D9594;
+  --color-white-dark: #BCC6C2;
+  --color-white-medium: #CFDAD5;
+  --color-white-light: #E2EEE8;
+
+  --text-primary: var(--color-white-medium);
+  --text-secondary: var(--color-white-dark);
+  --color-primary: var(--color-yellow);
+
+  --max-width: 800px;
+}
+
+body {
+  background: var(--color-black-dark);
+  color: var(--text-primary);
+}
+
+.title p {
+  color: var(--text-primary);
+}
+
+.post,
+.profile-post {
+  border-top: 2px solid var(--color-black-light);
+}
+
+div.post-username {
+  color: var(--text-secondary);
+}
+
+.thread-title a,
+.category-list .category-title a,
+.profile-post-title a,
+.thread-title a:hover,
+.category-list .category-title a:hover,
+.profile-post-title a:hover {
+  color: var(--text-primary);
+}
+
+.thread-title a.visited,
+.category-list .category-title a.visited,
+.profile-post-title a.visited,
+.thread-title a:visited,
+.category-list .category-title a:visited,
+.profile-post-title a:visited {
+  color: var(--color-grey-medium);
+}
+
+blockquote {
+  background: rgba(var(--color-black-medium), 0.5);
+  color: var(--text-primary);
+  border-radius: 2px;
+  border: 1.5px solid var(--color-black-light);
+  border-left-width: 0.35rem;
+  border-left-color: var(--color-grey-medium);
+  margin: .5rem 0;
+  padding: .25rem .5rem;
+  font-style: italic;
+}
+
+.category-color {
+  border-radius: .25rem;
+  box-shadow: 0 0 1px 1px var(--color-white-dark);
+}
+
+.chip,
+.user-mention {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.post-title,
+.post-title a,
+.post-title a:visited,
+.post-title a:hover {
+  color: var(--text-primary);
+}
+
+tt {
+  color: var(--text-secondary);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-top: 0.2rem;
+  padding-bottom: 0;
+}
+
+span.pre {
+  line-height: 1em;
+  font-family: monospace;
+}
+
+/* code syntax highlighting */
+
+.code code,
+.code tt {
+  font-family: monospace;
+  background: repeating-linear-gradient(
+  45deg,
+  var(--color-black-dark),
+  var(--color-black-dark) 3px,
+  var(--color-black-darkest) 3px,
+  var(--color-black-darkest) 6px
+);
+  color: var(--text-primary);
+  border-radius: .2rem;
+  font-size: 0.6rem;
+  padding: 0.25rem 0.25rem
+}
+
+pre.code::before {
+  color: var(--color-grey-light);
+    opacity: 0.25;
+  font-family: monospace;
+  font-size: 0.5rem;
+    transition: opacity 0.3s;
+}
+
+pre.code:hover::before {
+    opacity: 1;
+}
+
+pre .Comment {
+  color: var(--color-grey-medium);
+}
+
+pre .Keyword {
+  color: var(--color-red);
+}
+
+pre .Type {
+  color: var(--color-green);
+}
+
+pre .Operator {
+  color: var(--color-orange);
+}
+
+pre .atr {
+  color: var(--color-blue);
+}
+
+pre .def {
+  color: var(--color-purple);
+}
+
+pre .StringLit {
+  color: var(--color-yellow);
+}
+
+pre .DecNumber,
+pre .FloatNumber {
+  color: var(--color-blue);
+}
+
+pre .EscapeSequence {
+  color: var(--color-red);
+}
+
+/* end code syntax highlighting */
+
+.load-more-posts {
+  color: var(--color-black-medium) !important;
+  background-color: var(--color-primary);
+  padding: .5em .75em;
+}
+
+.more-post-count {
+  color: var(--color-black-medium) !important;
+
+}
+
+.load-more-posts .more-post-count {
+  color: #aaa;
+}
+
+.load-more-separator {
+  color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.load-more-separator:hover {
+  color: var(--color-black-medium);
+  background-color: var(--color-primary);
+}
+
+.post-buttons .btn:hover {
+  background: var(--color-black-medium);
+  border-color: var(--color-black-medium);
+  color: var(--color-primary);
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg)
+  }
+
+  to {
+    filter: hue-rotate(360deg)
+  }
+}
+
+#img-logo {
+  vertical-align: middle;
+  height: 25px;
+  margin-left: 0.2rem;
+  animation: 10s linear infinite running hue;
+}
+
+#thread-buttons {
+  border-top: 2px solid var(--color-black-medium);
+}
+
+.btn.btn-primary:focus,
+.btn.btn-primary:hover {
+  color: var(--color-black-medium);
+}
+
+.btn.btn-primary {
+  color: var(--color-black-medium);
+}
+
+.btn.btn-link:hover {
+  color: var(--color-primary);
+}
+
+.btn-secondary,
+#main-buttons .dropdown>.btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+.btn-secondary:hover,
+#main-buttons .dropdown>.btn:hover,
+.btn-secondary:focus,
+#main-buttons .dropdown>.btn:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-primary);
+}
+
+.form-input,
+#main-navbar .search-input {
+  background: var(--color-black-light);
+  color: var(--text-secondary);
+  border: none;
+}
+
+#main-navbar .search-input {
+  padding: .2rem .5rem !important;
+  width: 200px;
+  margin-right: .6rem;
+}
+
+#main-navbar {
+  border-bottom: 1.5px solid var(--color-black-light);
+  background: var(--color-black-medium);
+}
+
+.table td,
+.table th {
+  border-bottom: 2px solid var(--color-black-medium);
+}
+
+.panel {
+  border: 0.05rem solid var(--color-black-medium);
+}
+
+.tab {
+  border-bottom: 0.05rem solid var(--color-black-medium);
+}
+
+.tab .tab-item a {
+  border-bottom: 0.1rem solid transparent;
+}
+
+.tab .tab-item.active a,
+.tab .tab-item a.active {
+  border-bottom-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+a,
+a:hover,
+a:active {
+  color: var(--color-primary);
+}
+
+.menu {
+  background: var(--color-black-light);
+  box-shadow: 0 0.05rem 0.2rem var(--color-black-dark);
+}
+
+.menu .menu-item>a:focus,
+.menu .menu-item>a:hover {
+  background: var(--color-black-light);
+  color: var(--color-primary);
+}
+
+.last-visit-separator span {
+  background: var(--color-black-dark);
+  border: 1.5px solid var(--color-primary);
+
+  color: var(--color-primary);
+  padding: .3em .75em;
+  border-radius: 4px;
+}
+
+.last-visit-separator td {
+  border-top: 1.5px solid var(--color-primary);
+  border-bottom: 1.5px solid var(--color-primary);
+}
+
+.information {
+  border-color: var(--color-black-light);
+}
+
+.posts {
+  margin: 0 auto 150px;
+  padding-right: 55px;
+}
+
+#thread-title {
+  max-width: var(--max-width);
+  margin: 0.7rem auto;
+  padding: 20px 55px;
+}
+
+.navbar.container.grid-xl {
+  max-width: var(--max-width);
+}
+
+
+#thread-title .title-text {
+  font-size: 1.5em;
+}
+
+#thread-title .category-status {
+  transition: opacity .3s ease;
+  opacity: 0.5;
+}
+
+#thread-title:hover .category-status {
+  opacity: 1;
+}
+
+.modal-container {
+  background: var(--color-black-dark);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  border: 1.5px solid var(--color-black-medium);
+    padding: 0;
+}
+
+.btn:focus,
+.btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #000;
+  text-decoration: none;
+}
+
+.modal:target .modal-overlay,
+.modal.active .modal-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.information {
+  color: var(--text-secondary);
+}
+
+.information-icon {
+  display: none;
+}
+
+/* making posts more compact */
+.post {
+  position: relative;
+  padding-top: 0;
+}
+
+.post-icon {
+  position: absolute;
+  top: .075rem;
+  left: .2rem;
+}
+
+.post-avatar {
+  height: 0.8rem;
+  width: 0.8rem;
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+}
+
+.post-title {
+  padding: .2rem .5rem .2rem 1.5rem;
+
+  background: var(--color-black-medium);
+  font-size: 0.7rem;
+}
+
+.post-main {
+  padding-left: 0 !important;
+  margin-bottom: 0;
+}
+
+#thread-title {
+  padding: 1rem 0 !important;
+}
+
+.post-content,
+p {
+  line-height: 1.2em;
+}
+
+p {
+  margin-bottom: 0.5rem;
+
+}
+
+.post-buttons {
+  margin: .4rem 0;
+}
+
+.post-buttons .btn {
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  height: auto;
+  padding: 0.25rem 0.3rem;
+}
+
+.post-title .post-metadata .post-replyingTo i.fa-reply {
+  font-size: .5rem;
+  margin-right: 0.2rem;
+  transform: translateY(-0.1rem) rotate(180deg);
+
+}
+
+.post-replyingTo .user-mention {
+  margin: 0;
+  transform: translateY(-0.07rem);
+}
+
+.post-metadata>a:last-child {
+  color: var(--color-grey-medium);
+  font-size: 0.6rem;
+  line-height: 0.2rem;
+}
+
+/* making home more compact */
+.thread-users {
+  display: none;
+}
+
+/* remove categories */
+table#threads-list thead tr th:nth-child(2),
+table#threads-list tbody tr td:nth-child(2) {
+  display: none !important;
+}
+
+/* remove views */
+table#threads-list thead tr th:nth-child(5),
+table#threads-list tbody tr td:nth-child(5) {
+  display: none !important;
+}
+
+.thread-list {
+  max-width: var(--max-width);
+}
+
+.posts {
+  padding-right: 0;
+}
+
+
+
+
+
+/*header stuff*/
+.btn-secondary,
+#main-buttons .dropdown>.btn {
+  margin-right: 0.5rem;
+}
+
+#main-navbar .avatar {
+  margin-right: .2rem;
+}
+
+
+
+/* buttons */
+.btn {
+  padding: .2rem .4rem;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+  height: 1.4rem;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-black-light);
+}
+
+.navbar-button,
+#main-navbar .btn-primary,
+#main-navbar .btn-primary:hover,
+.btn.btn-primary,
+.btn.btn-primary:focus,
+.btn.btn-primary:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-black-light);
+}
+
+.btn.btn-link {
+  color: var(--color-primary);
+}
+
+.btn.btn-link:focus,
+.btn.btn-link:hover {
+  color: var(--color-black-medium);
+}
+
+
+
+/* other pages */
+section.category-list {
+  max-width: var(--max-width);
+}
+
+.profile-stats dl {
+  border-color: var(--color-black-medium);
+}
+
+section.container.grid-xl {
+  max-width: var(--max-width);
+}
+
+.profile-avatar {
+  width: 2rem;
+  height: 2rem;
+}
+
+.divider {
+  border-color: var(--color-black-medium);
+}
+
+td.thread-title .show-sm {
+  display: none !important;
+}
+
+.empty.error,
+.empty.icon {
+  background: var(--color-black-dark);
+  color: var(--text-primary);
+}
+
+.about {
+    padding-top: 2rem;
+}
+
+
+*::selection {
+  background: var(--color-primary);
+  color: var(--color-black-dark);
+}
+
+*::-moz-selection {
+  background: var(--color-primary);
+  color: var(--color-black-dark);
+}
+
+hr {
+  background: var(--color-black-light);
+}
+
+button .fas {
+    transform: scale3d(0.75, 0.75, 1);
+    
+}
+
+.btn.btn-sm {
+    padding: 0.15em 0.6em;
+}
+
+
+
+#profile-btn {
+    position: relative;
+}
